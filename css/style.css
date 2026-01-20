@@ -3,9 +3,10 @@
 
 /* Général */
 
-*{margin: 0;}
+*{margin: 0; color: var(--BleuNoir);}
 
-a{
+
+a, i{
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     &:hover{
@@ -23,6 +24,7 @@ a{
     --Blanc:#fff;
     --BlancCasse:#E5E7EB;
     --BleuFonce:#1F2937;
+    --BleuNoir:#111827;
     --Jaune:#F59E0B;
     --Bleu:#3B82F6;
     --Gris:#9CA3AF;
@@ -30,6 +32,7 @@ a{
     /* Epaisseur */
     --W700:700;
     --W500:500;
+    --W400:400;
 }
 
 /* Classe */
@@ -103,12 +106,69 @@ header>div>nav>ul>li>#rdv{
 }
 
 footer{
-    background-color: var(--BleuFonce);
+    background-color: var(--BleuNoir);
 }
 
 footer>div{
     margin: auto;
     max-width: 1536px;
+    padding: 50px 0 20px 0;
+}
+
+footer>div *{
+    color: var(--Gris);
+    font-family: var(--Outfit);
+    font-size: 14px;
+    font-weight: var(--W400);
+}
+
+footer>div>#footer_div1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+footer>div>#footer_div1>article>h2{
+    font-size: 18px;
+    font-family: var(--Outfit);
+    font-weight: var(--W700);
+    color: var(--Blanc);
+    padding-bottom: 15px;
+}
+
+footer>div>#footer_div1>article>ul{
+    list-style: none;
+    margin-left: -40px;
+}
+
+footer>div>#footer_div1>article>ul>li{
+    padding-bottom: 10px;
+}
+
+footer>div>#footer_div1>article>a{
+    font-family: var(--Outfit);
+    font-size: 24px;
+    font-weight: var(--W700);
+    color: var(--Blanc);
+}
+
+footer>div>#footer_div1>article>a>i{
+    color: var(--Vert);
+}
+
+footer>div>#footer_div1>article>p{
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+footer>div>#footer_div2{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--Gris);
+}
+
+footer>div>#footer_div2>a:hover i{
+    color: var(--Vert);
 }
 
 
