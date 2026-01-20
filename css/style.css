@@ -164,7 +164,8 @@ footer>div>#footer_div1>article>p{
 footer>div>#footer_div2{
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--Gris);
+    border-top: 1px solid var(--BleuFonce);
+    padding-top: 20px;
 }
 
 footer>div>#footer_div2>a:hover i{
