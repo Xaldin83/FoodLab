@@ -5,7 +5,13 @@
 
 *{margin: 0;}
 
-a{text-decoration: none;}
+a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transition: all 0.3s ease-in-out;
+    }
+}
 
 :root{
     /* Font family */
@@ -13,17 +19,33 @@ a{text-decoration: none;}
 
     /* Couleur */
     --Vert:#10B981;
+    --VertFonce:#16A34A;
     --Blanc:#fff;
     --BlancCasse:#E5E7EB;
     --BleuFonce:#1F2937;
     --Jaune:#F59E0B;
     --Bleu:#3B82F6;
+    --Gris:#9CA3AF;
 
     /* Epaisseur */
     --W700:700;
     --W500:500;
 }
 
+/* Classe */
+
+.TransitionVert:hover{
+    color: var(--Vert);
+}
+
+.BackgroundVert{
+    background-color: var(--Vert);
+}
+
+
+.TransitionBackgroundVertFonce:hover{
+    background-color: var(--VertFonce);
+}
 
 /* Body */
 
@@ -36,6 +58,7 @@ header{
 
 header>div{
     max-width: 1536px;
+    padding: 0 20px;
     height: 72px;
     margin: auto;
     display: flex;
@@ -55,13 +78,18 @@ header>div>a>i{
     color: var(--Vert);
 }
 
+header>div>.fa-bars{
+    display: none;
+    color: var(--BleuFonce);
+}
+
 header>div>nav>ul{
     display: flex;
     list-style: none;
     gap: 40px;
 }
 
-header>div>nav>ul>li{
+header>div>nav>ul>li>a{
     font-size: 16px;
     font-family: var(--Outfit);
     font-weight: var(--W500);
@@ -70,7 +98,28 @@ header>div>nav>ul>li{
 
 header>div>nav>ul>li>#rdv{
     color: var(--Blanc);
-    background-color: var(--Vert);
     padding: 8px 20px;
     border-radius: 300px;
+}
+
+footer{
+    background-color: var(--BleuFonce);
+}
+
+footer>div{
+    margin: auto;
+    max-width: 1536px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:1024px){
+    header>div>nav{
+        display: none;
+    }
+
+    header>div>.fa-bars{
+        display: block;
+    }
 }
